@@ -1,16 +1,12 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { Portfolio } from './components/Portfolio';
+import './index.css'
 
-function App() {
+export function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Test
-      </h1>
+    <div className="min-h-screen bg-gray-50 py-10">
+      <Portfolio />
     </div>
   )
 }
 
-export default App
+ 

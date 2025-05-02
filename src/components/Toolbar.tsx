@@ -6,12 +6,18 @@ type ToolbarProps = {
 
 export const Toolbar = ({ filters, selected, onSelectFilter }: ToolbarProps) => {
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-wrap gap-10">
       {filters.map((filter) => (
-        <button key={filter}>{filter}</button>
+        <button
+          key={filter}
+          className={`px-5 py-10 transition-colors ${
+            selected === filter ? 'bg-gray-600 text-white' : 'bg-white hover:bg-gray-300'
+          }`}
+          onClick={() => onSelectFilter(filter)}
+        >
+          {filter}
+        </button>
       ))}
     </div>
   );
 };
-
- 

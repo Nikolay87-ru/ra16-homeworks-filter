@@ -1,6 +1,14 @@
-import React from 'react';
-import Toolbar from './Toolbar';
+import { Toolbar } from './Toolbar';
 
+export const Portfolio = () => 
 
-
-export default Portfolio;
+  return (
+    <div className="container mx-auto p-4">
+      <Toolbar 
+        filters={filters}
+        selected={selectedFilter}
+        onSelectFilter={setSelectedFilter}
+      />
+    </div>
+  );
+};
