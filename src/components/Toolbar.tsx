@@ -1,15 +1,17 @@
-import React from 'react';
-
 type ToolbarProps = {
   filters: string[];
   selected: string;
   onSelectFilter: (filter: string) => void;
-}
+};
 
-const Toolbar: React.FC<ToolbarProps> = ({filters, selected, onSelectFilter}) => {
+export const Toolbar = ({ filters, selected, onSelectFilter }: ToolbarProps) => {
   return (
-    <div className='flex gap-10'><button></button></div>
-  )
-}
+    <div className="flex gap-10">
+      {filters.map((filter) => (
+        <button key={filter}>{filter}</button>
+      ))}
+    </div>
+  );
+};
 
-export default Toolbar;
+ 
