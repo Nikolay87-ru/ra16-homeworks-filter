@@ -1,19 +1,9 @@
-import { useState } from 'react';
-import { Toolbar } from './components/Toolbar';
+import { Portfolio } from './components/Portfolio';
 
 export function App() {
-  const [selectedFilter, setSelectedFilter] = useState('All');
-
-  const filters = ['All', 'Websites', 'Flayers', 'Business Cards'];
-
-  const handleFilterSelect = (filter: string) => {
-    console.log('Выбран фильтр:', filter);
-    setSelectedFilter(filter);
-  };
-
   return (
-    <div className="mx-60 my-10">
-      <Toolbar filters={filters} selected={selectedFilter} onSelectFilter={handleFilterSelect} />
+    <div className="min-h-screen bg-gray-50 py-8">
+      <Portfolio />
     </div>
   );
 }
