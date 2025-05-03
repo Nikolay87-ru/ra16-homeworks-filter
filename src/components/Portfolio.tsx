@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Toolbar } from './Toolbar';
+import { ProjectList } from './ProjectList';
 
 const projectsData = [
   {
@@ -85,6 +86,7 @@ export const Portfolio = () => {
   return (
     <div className="container mx-auto p-4">
       <Toolbar filters={filters} selected={selectedFilter} onSelectFilter={setSelectedFilter} />
+      <ProjectList projects={selectedImage} />
     </div>
   );
 };
