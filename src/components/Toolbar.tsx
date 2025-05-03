@@ -6,17 +6,15 @@ type ToolbarProps = {
 
 export const Toolbar = ({ filters, selected, onSelectFilter }: ToolbarProps) => {
   return (
-    <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
+    <div className="flex gap-2 mb-4">
       {filters.map((filter) => (
         <button
           key={filter}
-          style={{
-            padding: '8px 16px',
-            background: selected === filter ? '#3b82f6' : '#e5e7eb',
-            color: selected === filter ? 'white' : 'black',
-            border: 2,
-            cursor: 'pointer',
-          }}
+          className={`px-4 py-1 border border-black font-bold ${
+            selected === filter 
+              ? 'bg-gray-700 text-white' 
+              : 'bg-white text-gray-500 hover:bg-gray-300'
+          }`}
           onClick={() => onSelectFilter(filter)}
         >
           {filter}
