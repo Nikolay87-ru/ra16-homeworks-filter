@@ -11,8 +11,8 @@ export const Toolbar = ({ filters, selected, onSelectFilter }: ToolbarProps) => 
         <button
           key={filter}
           className={`px-4 py-1 border border-black font-bold ${
-            selected === filter 
-              ? 'bg-gray-700 text-white' 
+            selected === filter
+              ? 'bg-gray-700 text-white'
               : 'bg-white text-gray-500 hover:bg-gray-300'
           }`}
           onClick={() => onSelectFilter(filter)}
